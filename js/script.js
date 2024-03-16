@@ -13,8 +13,6 @@ const global = {
   },
 };
 
-console.log(global.currentPage);
-
 // Display 20 most popular TV shows
 async function displayPopularMovies() {
   const { results } = await fetchAPIData('movie/popular');
@@ -465,7 +463,6 @@ function addCommasToNumber(number) {
 function init() {
   switch (global.currentPage) {
     case '/':
-    case '/index.html':
       displaySLider();
       displayPopularMovies();
       break;
